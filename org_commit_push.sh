@@ -1,4 +1,4 @@
-HOST_FILE="~/.host"
+HOST_FILE="$HOME/.host"
 
 if [ -f "$HOST_FILE" ]; then
     HOSTNAME=$(cat $HOST_FILE)
