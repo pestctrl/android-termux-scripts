@@ -1,3 +1,15 @@
+HOST_FILE="~/.host"
+
+if [ -f "$HOST_FILE" ]; then
+    HOSTNAME=$(cat $HOST_FILE)
+else
+    echo "Hey, what should the branch name be for this device? "
+    read HOSTNAME
+    echo $HOSTNAME > $HOST_FILE
+fi
+
+echo "Remote branch is origin/$HOSTNAME"
+
 cd /sdcard/agenda
 
 if ! git diff --quiet
@@ -10,4 +22,4 @@ else
     git merge origin/desktop --ff-only
 fi
 
-git push --force -u origin mobile
+git push --force -u origin $HOSTNAME
