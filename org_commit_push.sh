@@ -23,3 +23,5 @@ else
 fi
 
 git push --force -u origin $HOSTNAME
+
+am startservice -a com.orgzly.intent.action.SYNC_START com.orgzly/com.orgzly.android.sync.SyncService
