@@ -1,3 +1,5 @@
+#!/bin/bash
+
 HOST_FILE="$HOME/.host"
 
 if [ -f "$HOST_FILE" ]; then
@@ -19,7 +21,10 @@ then
 else
     git fetch --all
     git pull --ff-only
-    git merge origin/desktop --ff-only
+    for BRANCH in desktop gaming-laptop laptop mobile
+    do
+        git merge "origin/$BRANCH" --ff-only
+    done
 fi
 
 git push --force -u origin $HOSTNAME
