@@ -16,7 +16,7 @@ cd /sdcard/agenda
 
 if ! git diff --quiet
 then
-    git add .
+    git add -u .
     git commit -m "$HOSTNAME autocommit: $(date +'%D %T')"
 else
     git fetch --all
