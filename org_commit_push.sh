@@ -12,13 +12,13 @@ fi
 
 echo "Remote branch is origin/$HOSTNAME"
 
-if [ ! -d "~/storage/shared" ]; then
+if [ ! -d "$HOME/storage/shared" ]; then
     echo "Hmmm, ~/storage/shared does not exist..."
     echo "Have you run termux-setup-storage?"
     echo "pkg install termux-api && termux-setup-storage"
 fi
 
-if [ ! -d "~/storage/shared/org/" ]; then
+if [ ! -d "$HOME/storage/shared/org/" ]; then
     echo "Hmmm, org repo isn't present"
     echo "Clone it! Remember to submodule update recursive init!"
 fi
