@@ -23,7 +23,7 @@ if [ ! -d "~/storage/shared/org/" ]; then
     echo "Clone it! Remember to submodule update recursive init!"
 fi
 
-cd ~/storage/shared/org/agenda
+cd ~/storage/shared/org/
 
 if ! git diff --quiet
 then
