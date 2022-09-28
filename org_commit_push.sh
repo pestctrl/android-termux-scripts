@@ -12,7 +12,7 @@ fi
 
 echo "Remote branch is origin/$HOSTNAME"
 
-cd /sdcard/agenda
+cd /sdcard/org/agenda
 
 if ! git diff --quiet
 then
