@@ -16,11 +16,13 @@ if [ ! -d "$HOME/storage/shared" ]; then
     echo "Hmmm, ~/storage/shared does not exist..."
     echo "Have you run termux-setup-storage?"
     echo "pkg install termux-api && termux-setup-storage"
+    exit -1
 fi
 
 if [ ! -d "$HOME/storage/shared/org/" ]; then
     echo "Hmmm, org repo isn't present"
     echo "Clone it! Remember to submodule update recursive init!"
+    exit -1
 fi
 
 cd ~/storage/shared/org/
