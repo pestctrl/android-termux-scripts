@@ -34,7 +34,7 @@ then
 else
     git fetch --all
     git pull --ff-only
-    for BRANCH in desktop gaming-laptop laptop mobile
+    for BRANCH in desktop gaming-laptop laptop mobile nixframe
     do
         git merge "origin/$BRANCH" --ff-only
     done
